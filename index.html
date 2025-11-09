@@ -17,7 +17,20 @@
       <button @click="age++">Click Me increase age</button>
       <button @click="age--">Click Me ro decrease age</button>
 
-      <div @click="title = 'hey hey hey'">change the title</div> 
+      <!-- or you can invoke a methode from app  -->
+      <div @click="changeTitle('fakhre')">change the title</div>
+
+      <!-- you cand do it a conditions tamplates   -->
+      <div v-if="showBooks">
+        <h4>{{ Books }}</h4>
+      </div>
+
+      <button @click="toggleShowBooks">
+        <span v-if="showBooks"> Hide Books</span>
+        <span v-else> Show Books </span>
+      </button>
+
+       
     </div>
 
     <script src="app.js"></script>
